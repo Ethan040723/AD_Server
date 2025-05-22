@@ -1,3 +1,5 @@
+````bash 
+
 if (-not (Get-ADOrganizationalUnit -Filter {Name -eq "Personnel"})) {
     New-ADOrganizationalUnit -Name "Personnel" -Path "DC=charlyne,DC=local"
 }
@@ -59,3 +61,5 @@ foreach ($user in $Users) {
         Add-ADGroupMember -Identity $user.Group -Members $user.SamAccountName
     }
 }
+
+```

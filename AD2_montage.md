@@ -1,6 +1,7 @@
 #
 # Script Windows PowerShell pour le déploiement d’AD DS
 #
+```bash
 $domain = (Get-WmiObject -Class Win32_ComputerSystem).Domain
 if ($domain -ne "WORKGROUP") {
     Write-Host "L'ordinateur est déjà membre d'un domaine. L'ajout d'AD sera arrêté."
@@ -20,3 +21,4 @@ Install-ADDSDomainController `
 -SiteName "Default-First-Site-Name" `
 -SysvolPath "C:\Windows\SYSVOL" `
 -Force:$true
+```

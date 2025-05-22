@@ -1,6 +1,7 @@
 #
 # Script pour la preparation de la Vm
 #
+```bash 
 $domain = (Get-WmiObject -Class Win32_ComputerSystem).Domain
 if ($domain -ne "WORKGROUP") {
     Write-Host "L'ordinateur est déjà membre d'un domaine. L'ajout d'AD sera arrêté."
@@ -18,3 +19,5 @@ Rename-Computer -NewName client_1
 Add-Computer -Domain charlyne.local
 
 Restart-Computer
+
+```

@@ -1,3 +1,4 @@
+``` bash
 Install-WindowsFeature FS-FileServer
 
 
@@ -15,3 +16,4 @@ if (-not (Get-SmbShare -Name $shareName -ErrorAction SilentlyContinue)) {
 else{
     Write-Host "le dossier partager"
 }
+```
