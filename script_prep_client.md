@@ -16,7 +16,7 @@ Set-DnsClientServerAddress -InterfaceAlias Ethernet -ServerAddress 192.168.56.21
 
 Rename-Computer -NewName client_1
 
-Add-Computer -Domain charlyne.local
+Add-Computer -Domain eval.server
 
 Restart-Computer
 
