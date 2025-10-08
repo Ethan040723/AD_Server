@@ -10,9 +10,9 @@ if ($domain -ne "WORKGROUP") {
 
 Set-ExecutionPolicy Unrestricted -Scope CurrentUser
 
-New-NetIPAddress -InterfaceAlias Ethernet -IPAddress 192.168.56.31 -PrefixLength 24
+New-NetIPAddress -InterfaceAlias Ethernet -IPAddress 192.168.1.24 -PrefixLength 24
 
-Set-DnsClientServerAddress -InterfaceAlias Ethernet -ServerAddress 192.168.56.21 , 192.168.56.22
+Set-DnsClientServerAddress -InterfaceAlias Ethernet -ServerAddress 192.168.1.1
 
 Rename-Computer -NewName client_1
 
